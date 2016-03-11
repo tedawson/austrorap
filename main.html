@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Poetic Loop</title>
+	<link href='stylesheet.css' rel='stylesheet' />
+	<script src='functions.js'></script>	
+</head>
+	
+<body>
+	<ul id="titleBar">
+		<li><a href="nadathere.html">Contents</a></li>
+		<li><a href="nadathere.html">Bibliography</a></li>
+		<li><a href="nadathere.html">PDF Version</a></li>
+		<ul style="float:right;list-style-type:none;">
+			<li><a href="nadathere.html">Tutorial</a></li>
+			<li><a href="nadathere.html">Media Options</a></li>
+		</ul>
+	</ul>
+	
+	<div id="reference">
+		<h3>Reference Panel</h3>
+		<p id="entryHere"></p>
+		<p id="clickLand"></p>
+	
+	</div>
+	<div id="media">
+		<h3>Sound Panel</h3>
+		<p>Player 1: <em id="playing">No Audio Selected</em></p>
+		<audio id="bobby" controls></audio>
+		<p>Player 2: <em id="playing2">No Audio Selected</em></p>
+		<audio id="bobby2" controls></audio>
+	</div>
+
+	<div id="writing">
+	
+		<h3>Chapter X. Interface Tutorial</h3>
+
+		<p><em>This three minute tutorial will show you how to use the interface for my dissertation.
+		A quick tour: the buttons on the top bar don't do anything right now. Ultimately, they will allow the reader to navigate the dissertation.
+		In the main text, many elements are clickable, causing something to happen in one of three fields.
+		</em></p>
+
+		<h4>Part 1: The Reference Panel and Footnotes</h4>
+
+		<p><em>The gray panel on the right displays bibliographic information (whether for items in the main text, footnotes, audiosamples, etc.) When you <em style="color: red">mouseover items in green,</em>
+		you'll see the reference in the reference panel, and (if applicable) some information on what <em style="color: red">clicking the item</em> will do. <em style="color: red">Footnotes display on mouseover.</em></em></p>
+        <p>Consider the paragraph with which Heinz Schlaffer opens his volume on poetry: </p>
+
+		<blockquote id="Schlaffer1"><a href="http://www.reclam.de/detail/978-3-15-020351-4" target="_blank">&quotGedichte sind leicht zu erkennen, aber schwer zu begreifen. Ob sie gesungen, 	gesprochen oder gelesen werden, es fehlt ihnen nicht an auff&aumllligen Merkmalen, die den 	H&oumlrer oder Leser sogleich davon &uumlberzeugen, dass er es mit einem Exemplar der Lyrik zu 	tun hat, auch wenn er den Begriff 'Lyrik' nicht kennt und stattdessen 'Lied', 'Reime', 	'Verse' sagt. Ohr und Auge t&aumluschen sich fast nie: Was sich zu einer Melodie singen l&aumlsst, 	was Rhythmen und Kl&aumlnge auff&aumlllig wiederholt, was in abgesetzten Zeilen geschrieben ist, 	
+		dabei eine &uumlberschaubare L&aumlnge hat - das muss ein Gedicht sein&quot (7).</a></blockquote>
+
+		<p>Even if this 'definition' resembles somewhat <a id="PotStew" href="https://en.wikipedia.org/wiki/I_know_it_when_I_see_it" target="_blank">Justice Potter Stewart's famous 'definition' of pornography</a>, it succinctly describes the features which we use to identify poetry.
+		Of particular focus for my work is the repetition of rhythm and sound as a hallmark of poetry, since these are criteria which rap music fulfills to 
+		a particularly high extent. <sup id="fn1">NOTE</sup>
+		</p>
+		
+		
+		<h4>Part 2: The Sound Panel</h4>
+		
+		<p><em>Hundreds of sound clips are embedded in the dissertation. Below are three transcriptions of lyrics. <em style="color: red">Mousing over them will show artist and song title</em> in the Reference Panel.
+		<em style="color: red">Clicking the transcriptions</em> places the corresponding sound files in <em style="color: red">Player 1,</em> where they can be played, rewound, etc.
+		</em></p>
+		
+		<p><em>Thus, suppose we want to show that lyrics that look trite on paper involve formal features not seen (which may or may not make them any better):
+		</em></p>
+		<p class="audioQuote" id="aq1">&quotSchwarzer Van, wir steigen in Zeitlupe aus / So cool als tau'n wir aus 'ner Eistruhe auf / Besser du nimmst deine Nike-Schuhe, lauf / Wir r&aumlumen diese Schei&szligbude auf&quot</p> 
+		<p><em>It will be important to compare tracks. Let's look at the two below. We want to see how a Texta song about the Iraq war (second transcription below) repurposes the lyrics of a Dynamite Deluxe song (first transcription below) 
+		<em style="color: red">Click on the first transcription below</em> to put it in Player 1. 
+		<em style="color: red">Then click the sound panel.</em> This loads the contents of <em style="color: red">Player 1 into Player 2.</em> Now you can 
+		<em style="color: red">click the second transcription below</em> to put the Texta track in Player 1, and then compare the two tracks.
+		</em>
+		</p>
+		<p class="audioQuote" id="aq2"> Dynamite Deluxe: Ey, ich weiss, du wusstest, dass da was im Busch is /
+				Komm St&uumlck f&uumlr St&uumlck wie Puzzles, irgendwas ganz gro&szliges /
+				Es ersch&uumlttert die Nation, sp&uumlrst du schon die Vibration? /
+				Es wird sich endlos wiederholn, weder ihn noch sie verschonen</p>
+		<p class="audioQuote" id="aq3">Texta: Es es bahnt sich an (ich weiss, du wusstest, dass da was im Busch is) / 
+				etwas, das keiner mehr stoppen kann (Komm St&uumlck f&uumlr St&uumlck wie Puzzles, irgendwas ganz gro&szliges) /
+				macht euch bereit f&uumlr den Untergang (Es ersch&uumlttert die Nation, sp&uumlrst du schon die Vibration?) /
+				die Apokalypse naht, es kommt der j&uumlngste Tag, die Prophezeiung wird wahr</p>
+	
+		<h4>Part 3: Maps and Visualizations</h4>
+		<p><em>To avoid loading lag, <em style="color: red">interactive maps and gephi visualizations</em> are linked to <em style="color: red">clickable images.</em> Click below to view the (functional but sill incomplete) map for Walkmania (it will open in a separate tab)</em></p>
+		<a href="PlacingWalkmania.html" target="_blank"><img src="WalkmaniaMap.png" alt="There should be a map here." width="700" height="400"></a>
+		<p><em>Here ends the tutorial! Thanks for reading.</em></p>
+	</div>
+	
+<!--	<div id="footnotes">
+		<p id="fnZone"></p>
+	</div> 
+-->
+	
+</body>
+
+</html>

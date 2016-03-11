@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Placing Walkmania</title>
+
+<!--  project css -->
+<link href='stylesheet.css' rel='stylesheet' />
+<!--  CSS MapBox -->
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+<!--  JAVASCRIPT MapBox -->
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+
+<style>
+body { margin:0; padding:0; background-color: black; }
+#map { position:absolute; top:40px; bottom:0; width:100%;}
+
+.legend label,
+.legend span {
+  display:block;
+  float:left;
+  height:20px;
+  width:33%;
+  text-align:center;
+  font-size:9px;
+  color:#808080;
+  }
+  
+</style>
+
+</head>
+<body>
+<div id='legend' style='display:none;'>
+  <strong>Placing Walkmania</strong>
+  <nav class='legend clearfix'>
+    <span style='background:#ee00ff;'></span>
+	<span style='background:#0011ff;'></span>
+	<span style='background:#737110;'></span>
+    <label>Sample Sources</label>
+    <label>Textual References</label>
+    <label>Other</label>
+	<label></label>
+    <label></label>
+    <label></label>
+</div>
+<ul id="titleBar">
+		<li><a href="nadathere.html">Visualization</a></li>
+		<ul style="float:right;list-style-type:none;">
+			<li><a href="nadathere.html">Media Options</a></li>
+		</ul>
+	</ul>
+
+<div id="map"></div>
+
+<script>
+var map = L.mapbox.map('map', 'tedawson.linkoif0');
+var myLayer = L.mapbox.featureLayer().addTo(map);
+var beat = "#ee00ff";
+var sounddrop = "#0011ff";
+var placedrop = "#ffb900";
+var subject = "#737110"
+var geojson =
+{ "type": "FeatureCollection",
+"features": [
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// Texta Marker
+"coordinates": [14.282129,48.300746]
+},
+"properties":{
+"title": "Texta", 
+//"marker-color": "XXXX",
+"marker-size": "small",
+//"image": "XXXX",
+"description": "XXXX",
+}
+},
+// Textual Citations
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// A Tribe Called Quest (St. Albans, Queens) 
+"coordinates": [-73.7636009,40.6904931]
+},
+"properties":{
+"title": "A Tribe Called Quest", 
+"marker-color": sounddrop,
+"marker-size": "small",
+//"image": "XXXX",
+"description": '"In meinem Walkman l&aumluft ein Tape von A Tribe Called Quest" - Flip, third verse',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [-73.7636009,40.6904931]
+            ]
+          },
+        "properties": {
+          "stroke": sounddrop,
+		  "stroke-width": 1
+		  }
+        },
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// Goodie Mob
+"coordinates": [-84.420604,33.7677129]
+},
+"properties":{
+"title": "Goodie Mob (Atlanta, USA)", 
+"marker-color": sounddrop,
+"marker-size": "small",
+//"image": "XXXX",
+"description": '"dazu Soultapes von den OJays und Marvin Gaye / von O-VO, Demos und Promos, Chaka 	Demus, Goodie Mob, Mobb Deep und Livemitschnitten von den Jams in der Kapu / ist der Sound den ich h&oumlr bis zum Ende meines Akkus" - Skero, first verse.',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [-84.420604,33.7677129]
+            ]
+          },
+        "properties": {
+		  "title": "Goodie Mob (Atlanta, USA)", 
+          "stroke": sounddrop,
+		  "description": 'A name drop in Skeros verse.',
+		  "stroke-width": 1
+		  }
+		  },
+		  {
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// Mobb Deep (Queens)
+"coordinates": [-73.942836,40.754203]
+},
+"properties":{
+"title": "Mobb Deep(Queens, NY)", 
+"marker-color": sounddrop,
+"marker-size": "small",
+//"image": "XXXX",
+"description": 'A namedrop in Skeros verse.',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [-73.942836,40.754203]
+            ]
+          },
+        "properties": {
+		  "title": "Mobb Deep(Queens, NY)", 
+          "stroke": sounddrop,
+		  "description": 'A namedrop in Skeros verse.',
+		  "stroke-width": 1
+		  }
+        },
+		{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// Chaka Demus (Kingston, Jamaica)
+"coordinates": [-76.8006563,18.0179363]
+},
+"properties":{
+"title": "Chaka Demus (Kingston, Jamaica)", 
+"marker-color": sounddrop,
+"marker-size": "small",
+//"image": "XXXX",
+"description": 'A namedrop in Skeros verse.',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [-76.8006563,18.0179363]
+            ]
+          },
+        "properties": {
+		  "title": "Chaka Demus (Kingston, Jamaica)", 
+          "stroke": sounddrop,
+		  "description": 'A namedrop in Skeros verse.',
+		  "stroke-width": 1
+		  }
+        },
+		{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// Marvin Gaye (Washington, D.C.)
+"coordinates": [-77.0145665,38.8993488]
+},
+"properties":{
+"title": "Marvin Gaye (Washington, D.C.)", 
+"marker-color": sounddrop,
+"marker-size": "small",
+//"image": "XXXX",
+"description": 'A namedrop in Skeros verse.',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [-77.0145665,38.8993488]
+            ]
+          },
+        "properties": {
+		  "title": "Marvin Gaye (Washington, D.C.)", 
+          "stroke": sounddrop,
+		  "description": 'A namedrop in Skeros verse.',
+		  "stroke-width": 1
+		  }
+        },
+		{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// OhVo (Oberösterreich)
+"coordinates": [13.87012,48.1168351]
+},
+"properties":{
+"title": "OhVo (Oberösterreich)", 
+"marker-color": sounddrop,
+"marker-size": "small",
+//"image": "XXXX",
+"description": 'A namedrop in Skeros verse.',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [13.87012,48.1168351]
+            ]
+          },
+        "properties": {
+		  "title": "OhVo (Oberösterreich)", 
+          "stroke": sounddrop,
+		  "description": 'A namedrop in Skeros verse.',
+		  "stroke-width": 1
+		  }
+        },
+		{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// Jams in der Kapu (The Kapu Club, Linz, Austria)
+"coordinates": [14.2821294,48.300746]
+},
+"properties":{
+"title": "Jams in der Kapu (The Kapu Club, Linz, Austria)", 
+"marker-color": sounddrop,
+"marker-size": "small",
+//"image": "XXXX",
+"description": 'A namedrop in Skeros verse.',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [14.2821294,48.300746]
+            ]
+          },
+        "properties": {
+		  "title": "Jams in der Kapu (The Kapu Club, Linz, Austria)", 
+          "stroke": sounddrop,
+		  "description": 'A namedrop in Skeros verse.',
+		  "stroke-width": 1
+		  }
+        },
+		{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// The O'Jays (Canton, OH, USA)
+"coordinates": [-81.365144,40.8047503]
+},
+"properties":{
+"title": "The O'Jays (Canton, OH, USA)", 
+"marker-color": sounddrop,
+"marker-size": "small",
+//"image": "XXXX",
+"description": 'A namedrop in Skeros verse.',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [-81.365144,40.8047503]
+            ]
+          },
+        "properties": {
+		  "title": "The O'Jays (Canton, OH, USA)", 
+          "stroke": sounddrop,
+		  "description": 'A namedrop in Skeros verse.',
+		  "stroke-width": 1
+		  }
+        },
+// BEAT ELEMENTS
+		{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// Betthupferl (FM4 Program) 
+"coordinates": [16.2891895,48.1773046]
+},
+"properties":{
+"title": "Betthupferl (FM4 Program)", 
+"marker-color": beat,
+"marker-size": "small",
+//"image": "XXXX",
+"description": 'One of the constitutive samples in the beat is from a radio program on the radio station FM4',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [16.2891895,48.1773046]
+            ]
+          },
+        "properties": {
+          "stroke": beat,
+		  "stroke-width": 1
+		  }
+        },
+		{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// Schlager 
+"coordinates": [10.005010,50.461220]
+},
+"properties":{
+"title": "Schlager", 
+"marker-color": beat,
+"marker-size": "small",
+//"image": "XXXX",
+"description": 'One of the constitutive samples in the beat is a German Schlager',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [10.005010,50.461220]
+            ]
+          },
+        "properties": {
+          "stroke": beat,
+		  "stroke-width": 1
+		  }
+        },
+// WALKMAN (Sony HQ)
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+// Walkman Sony
+"coordinates": [139.753474,35.6516525]
+},
+"properties":{
+"title": "Sony HQ (Japan)", 
+"marker-color": subject,
+"marker-size": "small",
+//"image": "XXXX",
+"description": 'Sony made the walkman, the subject of the song.',
+}
+},
+ { "type": "Feature",
+        "geometry": {
+          "type": "LineString",		  
+          "coordinates": [
+            [14.282129,48.300746], [139.753474,35.6516525]
+            ]
+          },
+        "properties": {
+		  "title": "Sony HQ (Japan)", 
+          "stroke": subject,
+		  "description": 'Sony made the walkman, the subject of the song.',
+		  "stroke-width": 1
+		  }
+        },
+]
+};
+
+// Focus
+map.setView([47.823469, 14.391956], 3)
+myLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+    var properties = feature.properties
+    var image = ''
+    if(properties.image){
+      image = '<img src="' + properties.image + '" width="100px" style="float: left"/>'
+    }
+    var description = ''
+    if(properties.description){
+      description = properties.description
+    }
+    var popupContent = image + '<h3>' + properties.title + '</h3>'
+                        + description   
+    marker.bindPopup(popupContent,{
+        closeButton: true,
+        minWidth: 450
+    });
+});
+myLayer.setGeoJSON(geojson);
+map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+</script>
+</body>
+</html>
