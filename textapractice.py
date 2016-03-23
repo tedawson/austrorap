@@ -16,7 +16,7 @@ f = open(target, 'w')
 f.write("Lyrics = \n" + lyrics + "\n")
 f.write("List of words = \n" + str(lyrics_list).decode("utf-8") + "\n")
 for pair in frequencies:
-	f.write(str(pair) + "\n")
+    f.write(str(pair) + "\n")
 
 f.close()
 #unicode(bytestr, "utf-8")
